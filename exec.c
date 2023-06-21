@@ -14,7 +14,7 @@ int exec(char *data, stack_t **top, unsigned int line_number, FILE *fd)
 	char *op;
 	instruction_t operations[] = {{"push", f_push},
 		{"pall", f_pall}, {"pint", f_pint},
-		{NULL, NULL}};
+		{"pop", f_pop}, {NULL, NULL}};
 
 	op = strtok(data, " \n\t");
 	bus.arg = strtok(NULL, " \n\t");
