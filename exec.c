@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * execute - executes opcode
+ * exec - executes opcode
  * @data: content from file
  * @top: pointer to top of stack
  * @line_number: line number
@@ -15,7 +15,8 @@ int exec(char *data, stack_t **top, unsigned int line_number, FILE *fd)
 	instruction_t operations[] = {{"push", f_push},
 		{"pall", f_pall}, {"pint", f_pint},
 		{"pop", f_pop}, {"swap", f_swap},
-		{"add", f_add}, {NULL, NULL}};
+		{"add", f_add}, {"nop", f_nop},
+		{NULL, NULL}};
 
 	op = strtok(data, " \n\t");
 	bus.arg = strtok(NULL, " \n\t");
