@@ -13,7 +13,8 @@ int exec(char *data, stack_t **top, unsigned int line_number, FILE *fd)
 	unsigned int x = 0;
 	char *op;
 	instruction_t operations[] = {{"push", f_push},
-		{"pall", f_pall},{NULL, NULL}};
+		{"pall", f_pall}, {"pint", f_pint},
+		{NULL, NULL}};
 
 	op = strtok(data, " \n\t");
 	bus.arg = strtok(NULL, " \n\t");
