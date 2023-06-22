@@ -18,6 +18,7 @@ int exec(char *data, stack_t **top, unsigned int line_number, FILE *fd)
 		{"add", f_add}, {"nop", f_nop},
 		{"sub", f_sub}, {"div", f_div},
 		{"mul", f_mul}, {"mod", f_mod},
+		{"pchar", f_pchar}, {"pstr", f_pstr},
 		{NULL, NULL}};
 
 	op = strtok(data, " \n\t");
